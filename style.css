@@ -1,0 +1,377 @@
+/*============== Estilização Geral ============== */
+:root{
+    --color-bg: rgb(245, 245, 245);
+    --color-header: rgb(247, 180, 56);
+    --color-header-ligth: rgb(230, 200, 144);
+    --color-btn-sucess: rgb(140, 243, 140);
+    --color-btn-danger: rgba(235, 97, 97, 0.897);
+    --color-btn-add: rgba(137, 216, 253, 0.822);
+    --color-white: #fff;
+
+    --transition: all 300ms ease;
+    --box-shadow: 2px 2px 3px rgba(0, 0 , 0, .5);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+button{
+    height: 30px;
+    padding: 5px 10px;
+    color: var(--color-white);
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/*============== Estilização Body ============== */
+body{
+    background: var(--color-bg);
+    width: 100%;
+    height: 100vh;
+}
+
+/*============== Estilização Div Container ============== */
+.container{
+    width: 100%;
+}
+
+.container header{
+    width: 100%;
+    height: 5rem;
+    background: var(--color-header);
+    padding: 10px;
+    margin-bottom: 5rem;
+}
+
+.container header h1{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/*============== Estilização Div Table Container ============== */
+.table-container{
+    width: 90%;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 3px rgba(0, 0 , 0, .5);
+    
+}
+
+/*============== Estilização All Botões ============== */
+.btn-Ad{
+    background: var(--color-btn-add);    
+}
+
+.btn-Sv{
+    background: var(--color-btn-sucess);
+}
+
+.btn-Cl{
+    background: var(--color-btn-add);
+}
+
+.edit{
+    background: var(--color-btn-sucess);
+    margin-right: 5px;
+}
+
+.delete{
+    background: var(--color-btn-danger);
+}
+
+/*============== Estilização Modal Container ============== */
+.modal-area{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.425);
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal-container{
+    width: 50%;
+    padding: 10px;
+    background: rgba(68, 67, 67, 0.849);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.modal-container section{
+    width: 100%;
+    background: var(--color-header);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    box-shadow: var(--box-shadow);
+}
+.modal-container section span{
+    cursor: pointer;
+    font-size: x-large;
+}
+.modal-container section span:hover{
+    color: var(--color-btn-danger);
+}
+
+.modal-container .form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.form div{
+    margin: 10px;
+}
+
+.form div > input{
+    width: 100%;
+    height: 2rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/*============== Estilização Tabela ============== */
+
+table{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+table thead, table tbody{
+    width: 100%;
+    height: 40px;
+}
+
+table thead tr th{
+    text-align: start;
+    padding: 10px;
+    background: var(--color-header);
+}
+
+table tbody tr td{
+    text-align: start;
+    padding: 10px;
+    background: var(--color-header-ligth);
+}
+
+/*============== Mediu Device ============== */
+
+@media screen and (max-width: 901px) {
+
+button{
+    height: 30px;
+    padding: 5px 10px;
+    color: var(--color-white);
+    font-size: small;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: var(--transition);
+}    
+
+/*============== Estilização Div Container ============== */
+.container header{
+    height: 3rem;
+    padding: 1px;
+}
+
+.container header h1{
+    padding: 10px 5px;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+}
+
+/*============== Estilização Div Table Container ============== */
+.table-container{
+    width: 99%;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 3px rgba(0, 0 , 0, .5);
+    
+}
+
+/*============== Estilização Modal Container ============== */
+
+.modal-container{
+    width: 80%;
+    padding: 10px;
+    background: rgba(68, 67, 67, 0.849);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.modal-container .form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.form div{
+    margin: 10px;
+}
+
+.form div > input{
+    width: 100%;
+    height: 2rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/*============== Estilização Tabela ============== */
+
+table{
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: small;
+}
+table thead, table tbody{
+    width: 90%;
+    height: 40px;
+}
+
+table thead tr th{
+    text-align: start;
+    padding: 5px;
+    background: var(--color-header);
+    text-align: center;
+}
+
+table tbody tr td{
+    text-align: center;
+    padding: 5px;
+    background: var(--color-header-ligth);
+}
+
+
+}
+
+/*============== Small Device ============== */
+
+@media screen and (max-width: 600px) {
+    
+    button{
+        height: 25px;
+        padding: 5px 10px;
+        color: var(--color-white);
+        font-size: x-small;
+        border: none;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+        cursor: pointer;
+        transition: var(--transition);
+    }    
+    
+    /*============== Estilização Div Container ============== */
+    .container header{
+        height: 2rem;
+        padding: 1px;
+    }
+    
+    .container header h1{
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        font-size: large;
+    }
+    
+    /*============== Estilização Div Table Container ============== */
+    .table-container{
+        width: 99%;
+        min-height: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        box-shadow: 2px 2px 2px 3px rgba(0, 0 , 0, .5);
+        
+    }
+    
+    /*============== Estilização Modal Container ============== */
+    .modal-area{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.425);
+        position: absolute;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-container{
+        width: 100%;
+        padding: 10px;
+        background: rgba(68, 67, 67, 0.849);
+        box-shadow: var(--box-shadow);
+        transition: var(--transition);
+    }
+    .modal-container .form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .form div{
+        margin: 5px;
+    }
+    
+    .form div > input{
+        width: 100%;
+        height: 2rem;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+    }
+    /*============== Estilização Tabela ============== */
+    
+    table{
+        width: 100%;
+        margin-top: 1.5rem;
+        font-size: x-small;
+    }
+    table thead, table tbody{
+        width: 100%;
+        height: 40px;
+    }
+    
+    table thead tr th{
+        text-align: start;
+        padding: 5px;
+        background: var(--color-header);
+    }
+    
+    table tbody tr td{
+        text-align: start;
+        padding: 5px;
+        background: var(--color-header-ligth);
+    }
+    
+    
+    }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regritrar de Clientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastro de Clientes</h1>
+        </header>
+
+
+
+        <div class="table-container">
+            <button id="add-cliente" class="btn-Ad">Add Novo Cliente</button>
+
+            <div class="modal-area">
+                <div class="modal-container">
+                    <section>
+                        <h1 id="h1">Add Novo Cliente</h1><span>⨉</span>
+                    </section>
+                    <div class="form">
+                        <div>
+                            <input type="text" name="name" id="name" placeholder="Nome do Cliente">
+                        </div>
+                        <div>
+                            <input type="number" name="number" id="number" placeholder="Telefone do Cliente">
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="Email do Cliente">
+                        </div>
+                        <div>
+                            <button id="registrar-cliente" onclick="cliente.registrarCliente()" class="btn-Sv">Salvar</button>
+                            <button id="cancelar-cliente" onclick="cliente.closeModal()" class="btn-Cl">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Acção</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
